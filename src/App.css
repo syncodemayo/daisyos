@@ -33,4 +33,9 @@
   .title {
     font-size: 4rem !important;
   }
+
+  .content-wrapper {
+    margin-top: -50px; /* Reduce overlap on mobile */
+    padding: 0 1rem;
+  }
 }
