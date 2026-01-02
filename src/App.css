@@ -1,0 +1,36 @@
+.app-container {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.content-wrapper {
+  max-width: 1200px;
+  margin: -100px auto 0;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 20;
+}
+
+.grid-2-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer {
+  text-align: center;
+  padding: 2rem;
+  color: #9ca3af;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 900px) {
+  .grid-2-col {
+    grid-template-columns: 1fr;
+  }
+  
+  .title {
+    font-size: 4rem !important;
+  }
+}

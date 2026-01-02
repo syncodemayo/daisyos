@@ -1,0 +1,310 @@
+.mcp-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Align to bottom */
+    z-index: 2000;
+    padding: 0; /* Remove padding */
+    opacity: 0;
+    animation: fadeIn 0.3s forwards;
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+.mcp-modal-content {
+    background: white;
+    width: 100%; /* Full width */
+    max-width: 100%; /* Ensure no max-width constraints */
+    border-radius: 24px 24px 0 0; /* Rounded top corners only */
+    box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.1);
+    padding: 2.5rem;
+    position: relative;
+    transform: translateY(100%); /* Start off-screen */
+    animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    max-height: 90vh;
+    min-height: 50vh;
+    overflow-y: auto;
+}
+
+.mcp-modal-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+@keyframes slideUp {
+    to { transform: translateY(0); }
+}
+
+.modal-handle {
+    width: 60px; /* Wider handle for easier grabbing */
+    height: 6px;
+    background: #e5e7eb;
+    border-radius: 3px;
+    margin: -1.5rem auto 1.5rem; /* Position at very top, adjust margins */
+    cursor: grab;
+    transition: background 0.2s, transform 0.2s;
+    touch-action: none; /* Prevent browser scrolling while dragging */
+}
+
+.modal-handle:active {
+    cursor: grabbing;
+    background: #d1d5db;
+    transform: scaleX(1.1);
+}
+
+.modal-header {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    align-items: flex-start;
+}
+
+.modal-icon-wrapper {
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    background: #f3f4f6;
+    flex-shrink: 0;
+    border: 1px solid #e5e7eb;
+}
+
+.modal-icon-wrapper.type-time { background: #dbeafe; color: #3b82f6; border-color: #bfdbfe; }
+.modal-icon-wrapper.type-eliza { background: #fae8ff; color: #a855f7; border-color: #e9d5ff; }
+.modal-icon-wrapper.type-weather { background: #e0f2fe; color: #0ea5e9; border-color: #bae6fd; }
+.modal-icon-wrapper.type-crypto { background: #dcfce7; color: #16a34a; border-color: #bbf7d0; }
+
+.modal-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+    color: #111827;
+}
+
+.modal-description {
+    color: #6b7280;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.section-label {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #9ca3af;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.endpoint-box {
+    background: #111827;
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    border: 1px solid #374151;
+}
+
+.endpoint-url {
+    font-family: 'Fira Code', monospace;
+    color: #4ade80;
+    font-size: 0.9rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.copy-btn-modal {
+    background: transparent;
+    border: 1px solid #374151;
+    color: #9ca3af;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-left: 1rem;
+}
+
+.copy-btn-modal:hover {
+    background: #374151;
+    color: white;
+}
+
+.split-view {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.col-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.col-header .section-label {
+    margin-bottom: 0;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    color: #9ca3af;
+    cursor: pointer;
+    padding: 4px;
+    font-size: 1rem;
+}
+
+.code-block-wrapper, .response-block {
+    background: #111827;
+    border-radius: 12px;
+    border: 1px solid #374151;
+    height: 300px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.code-block {
+    margin: 0;
+    padding: 1.5rem;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: #e5e7eb;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    word-break: break-all;
+    height: 100%;
+}
+
+.action-row {
+    margin-top: 1rem;
+    display: flex;
+    gap: 0.75rem;
+}
+
+.test-btn {
+    flex: 1;
+    background: linear-gradient(135deg, #f97316, #ea580c);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    box-shadow: 0 4px 12px rgba(234, 88, 12, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.test-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(234, 88, 12, 0.4);
+}
+
+.test-btn:disabled {
+    opacity: 0.7;
+    cursor: wait;
+}
+
+.console-icon::before {
+    content: ">_";
+}
+
+.docs-btn {
+    background: white;
+    border: 1px solid #e5e7eb;
+    color: #374151;
+    padding: 0.75rem 1.25rem;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: background 0.2s;
+}
+
+.docs-btn:hover {
+    background: #f9fafb;
+}
+
+.empty-state {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #4b5563;
+    gap: 1rem;
+    opacity: 0.6;
+}
+
+.empty-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: #374151;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: monospace;
+    font-size: 1.5rem;
+    color: #9ca3af;
+}
+
+.response-content {
+    color: #10b981; /* Success green for text */
+}
+
+.tools-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.tool-tag {
+    background: #f3f4f6;
+    color: #374151;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: 1px solid #e5e7eb;
+}
+
+@media (max-width: 768px) {
+    .split-view {
+        grid-template-columns: 1fr;
+    }
+}

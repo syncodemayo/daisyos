@@ -1,0 +1,96 @@
+.navbar-container {
+  position: fixed;
+  top: 20px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 2rem;
+  z-index: 100;
+  pointer-events: none; /* Allow clicking through the container space */
+}
+
+.nav-pill {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  border-radius: 999px;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  pointer-events: auto; /* Re-enable clicks on the pills */
+}
+
+.logo-pill {
+  padding: 6px 16px 6px 6px;
+  gap: 10px;
+}
+
+.nav-logo {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #a855f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.brand-name {
+  font-weight: 700;
+  color: white; /* Based on screenshot it looks dark, but header bg is light? Wait, original screenshot hero is bright. The pill bg is white-ish. Text should be readable. */
+  color: #4c1d95; /* Dark purple for better contrast if pill is light */
+  font-size: 1rem;
+}
+
+.links-pill {
+  padding: 6px 8px;
+  gap: 4px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #4b5563;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 999px;
+  transition: all 0.2s;
+}
+
+.nav-link:hover {
+  background: rgba(255, 255, 255, 0.4);
+  color: #1f2937;
+}
+
+.nav-link.active {
+  background: rgba(255, 255, 255, 0.6);
+  color: #1f2937;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.nav-link.special {
+   color: #7c3aed;
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+}

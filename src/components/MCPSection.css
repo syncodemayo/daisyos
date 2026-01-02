@@ -1,0 +1,140 @@
+.mcp-container {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  margin-top: 2rem;
+}
+
+.mcp-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.mcp-card {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 16px;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none; /* Remove underline for links */
+  color: inherit; /* Inherit text color */
+  cursor: pointer;
+}
+
+.mcp-card:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.mcp-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.mcp-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+}
+
+.mcp-icon.eliza { background: #ffedd5; color: #ea580c; }
+.mcp-icon.time { background: #dbeafe; color: #2563eb; }
+.mcp-icon.weather { background: #e0f2fe; color: #0284c7; }
+.mcp-icon.crypto { background: #fef3c7; color: #d97706; }
+
+.mcp-title {
+  flex: 1;
+}
+
+.mcp-title h4 {
+  margin: 0;
+  font-size: 1rem;
+  color: #1f2937;
+  font-weight: 700;
+}
+
+.mcp-title span {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.status-badge {
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.status-badge.active {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.mcp-desc {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #4b5563;
+  margin: 0 0 1.5rem 0;
+  flex: 1;
+}
+
+.mcp-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.mcp-tags span {
+  font-size: 0.7rem;
+  background: white;
+  border: 1px solid #e5e7eb;
+  padding: 4px 8px;
+  border-radius: 6px;
+  color: #4b5563;
+}
+
+.mcp-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.cost {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #9ca3af;
+  letter-spacing: 0.05em;
+}
+
+.arrow-btn {
+  background: white;
+  border: 1px solid #e5e7eb;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #9ca3af;
+  transition: all 0.2s;
+}
+
+.arrow-btn:hover {
+  background: #f3f4f6;
+  color: #1f2937;
+}
