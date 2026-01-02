@@ -12,13 +12,13 @@ const About: FC = () => {
           <div className="about-sidebar">
             <div className="avatar-container">
               <div className="avatar-wrapper large">
-                <img src="/images/logo.png" alt="Daisy Profile" className="profile-avatar" />
+                <img src="/images/logo.png" alt="Cleothe Profile" className="profile-avatar" />
                 <div className="status-indicator pulsate"></div>
               </div>
             </div>
             
             <div className="sidebar-info">
-              <h2 className="profile-name">Daisy <span className="verified-badge">✓</span></h2>
+              <h2 className="profile-name">Cleothe <span className="verified-badge">✓</span></h2>
               <span className="profile-role">AI OPERATING SYSTEM</span>
               
               <div className="stats-grid">

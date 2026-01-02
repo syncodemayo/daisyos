@@ -1,20 +1,12 @@
-import { useState, type FC } from 'react';
+import type { FC } from 'react';
 import './Hero.css';
 
 const Hero: FC = () => {
-  const [isCopied, setIsCopied] = useState(false);
-  const contractAddress = "5tjK9d2N1sjuU8ktmobtoTE4P2N2qrC4mKLuYpVXpump";
-
-  const handleCopy = () => {
-    navigator.clipboard.writeText(contractAddress);
-    setIsCopied(true);
-    setTimeout(() => setIsCopied(false), 2000);
-  };
 
   return (
     <section className="hero" id="hero">
       <div className="hero-content">
-        <h1 className="title">daisyOS</h1>
+        <h1 className="title">Cleothe</h1>
         
         <div className="cta-group">
           {/* Be With Me Button */}
@@ -36,26 +28,14 @@ const Hero: FC = () => {
                 <span className="dot">•</span> CONTRACT ADDRESS
              </div>
              <div className="contract-value-row">
-               <code className="contract-code">{contractAddress}</code>
-               <button className="copy-icon" onClick={handleCopy}>
-                 {isCopied ? (
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4ade80" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
-                 ) : (
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                 )}
-               </button>
+               <code className="contract-code">COMING SOON</code>
              </div>
           </div>
 
-          {/* Enter DaisyOS Button */}
+          {/* Enter Cleothe Button */}
           {/* <button className="tech-btn secondary-tech">
              <div className="btn-content">
-              <span>ENTER DAISYOS</span>
+              <span>ENTER CLEOTHE</span>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
                 <line x1="8" y1="21" x2="16" y2="21"></line>

@@ -17,7 +17,7 @@ const App: FC = () => {
         <MCPSection />
         <Gallery />
         <footer className="footer">
-          © DaisyOS The First AI OS. Crafted with magic. ✨
+          © Cleothe The First AI OS. Crafted with magic. ✨
         </footer>
       </div>
     </div>

@@ -28,7 +28,7 @@ const Gallery: FC = () => {
                      <img src={images[1]} alt="Rooftop" />
                 </div>
                  <div className="gallery-item" onClick={() => openLightbox(2)}>
-                     <img src={images[2]} alt="Daisy" style={{ objectPosition: 'top' }} />
+                     <img src={images[2]} alt="Cleothe" style={{ objectPosition: 'top' }} />
                 </div>
             </div>
 
