@@ -30,9 +30,9 @@ const Navbar: FC = () => {
     <nav className="navbar-container">
       <div className="nav-pill logo-pill">
         <div className="nav-logo">
-           <img src="/images/logo.png" alt="Logo" />
+           <img src="/images/logo.png" alt="Cleothe Logo" />
         </div>
-        <span className="brand-name">daisyOS</span>
+        <span className="brand-name">Cleothe</span>
       </div>
 
       <div className="nav-pill links-pill">

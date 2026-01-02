@@ -97,7 +97,7 @@ const MCPSection: FC = () => {
 
   return (
     <section className="mcp-container" id="mcp">
-      <h3>DaisyOS MCP</h3>
+      <h3>Cleothe MCP</h3>
       
       <div className="mcp-grid">
         <div className="mcp-card" onClick={() => setSelectedMCP(elizaMCPData)}>
